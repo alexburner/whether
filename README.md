@@ -1,4 +1,4 @@
-# chain of being
+# whether
 
 Weather forecast & historical data, around today
 
