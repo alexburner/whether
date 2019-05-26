@@ -1,0 +1,44 @@
+{
+  "name": "whether",
+  "version": "1.0.0",
+  "description": "Weather forecast & historical data, around today",
+  "engines": {
+    "node": "11.6.0",
+    "npm": "6.5.0"
+  },
+  "scripts": {
+    "build": "rm -rf ./docs && parcel build --out-dir ./docs --public-url ./ ./src/index.html",
+    "clean": "rm -rf .cache && rm -rf ./dev",
+    "dev": "rm -rf ./dev && parcel --out-dir dev ./src/index.html",
+    "tsc": "tsc --watch --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexburner/whether.git"
+  },
+  "keywords": [
+    "weather",
+    "forecast",
+    "historical",
+    "data",
+    "visualization"
+  ],
+  "author": "aburner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexburner/whether/issues"
+  },
+  "homepage": "https://github.com/alexburner/whether#readme",
+  "devDependencies": {
+    "@types/react": "16.8.18",
+    "@types/react-dom": "16.8.4",
+    "parcel-bundler": "1.12.3",
+    "prettier": "1.17.1",
+    "sass": "1.20.1",
+    "typescript": "3.4.5"
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  }
+}
