@@ -6,6 +6,9 @@
     "node": "11.6.0",
     "npm": "6.5.0"
   },
+  "browserslist": [
+    "since 2017-06"
+  ],
   "scripts": {
     "build": "rm -rf ./docs && parcel build --out-dir ./docs --public-url ./ ./src/index.html",
     "clean": "rm -rf .cache && rm -rf ./dev",
