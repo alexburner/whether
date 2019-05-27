@@ -1,10 +1,14 @@
 import { xfetch } from './xfetch'
 
-const HOST = 'https://api.darksky.net'
-const KEY = 'dangit'
+const BASE_URL = 'https://us-central1-whether.cloudfunctions.net/dark-sky'
 
-const getUrl = (resource: string, coords: Coordinates): string =>
-  `${HOST}/${resource}/${KEY}/${coords.latitude},${coords.longitude}`
+const getUrl = (coords: Coordinates, time?: number): string => {
+  let url = BASE_URL
+  url += `?latitude=${coords.latitude}`
+  url += `&longitude=${coords.longitude}`
+  if (time !== undefined) url += `&time=${time}`
+  return url
+}
 
 export const fetchForecast = async (coords: Coordinates): Promise<unknown> =>
-  xfetch(getUrl('forecast', coords))
+  xfetch(getUrl(coords))

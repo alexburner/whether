@@ -7,10 +7,10 @@ import { fetchForecast } from './util/dark-sky'
 
 render(<Root />, document.getElementById('root'))
 
-const foo = async () => {
+const test = async () => {
   const coords = await getCoords()
   const forecast = await fetchForecast(coords)
   console.log(forecast)
 }
 
-foo()
+test()
